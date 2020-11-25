@@ -13,8 +13,14 @@
 					"script": {
 						"id": "2f326d12-fe29-4aab-9eb3-19cc7dfd3fc0",
 						"exec": [
-							"pm.globals.get(\"variable_key\");",
-							"pm.variables.get(\"variable_key\");"
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Test\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.name).to.eql(\"Colombia\");",
+							"});"
 						],
 						"type": "text/javascript"
 					}

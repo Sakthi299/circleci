@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "72cd4fd7-85cc-4d00-93d3-931889f1d772",
+		"name": "country-code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get code by country",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2f326d12-fe29-4aab-9eb3-19cc7dfd3fc0",
+						"exec": [
+							"pm.globals.get(\"variable_key\");",
+							"pm.variables.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restcountries.eu/rest/v2/alpha/co",
+					"protocol": "https",
+					"host": [
+						"restcountries",
+						"eu"
+					],
+					"path": [
+						"rest",
+						"v2",
+						"alpha",
+						"co"
+					]
+				},
+				"description": "Viewing countries by code"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
